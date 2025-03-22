@@ -18,48 +18,28 @@ const userInfo = document.getElementById('user-info');
 const userName = document.getElementById('user-name');
 const logoutBtn = document.getElementById('logout-btn');
 
-// Particle background setup
+// Particle background setup using particles.js
 particlesJS('particles-js', {
   particles: {
     number: {
       value: 80,
-      density: {
-        enable: true,
-        value_area: 800
-      }
+      density: { enable: true, value_area: 800 }
     },
-    color: {
-      value: "#ffffff"
-    },
+    color: { value: "#ffffff" },
     shape: {
       type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000"
-      },
-      polygon: {
-        nb_sides: 5
-      }
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 5 }
     },
     opacity: {
       value: 0.5,
       random: true,
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
+      anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
     },
     size: {
       value: 3,
       random: true,
-      anim: {
-        enable: false,
-        speed: 4,
-        size_min: 0.1,
-        sync: false
-      }
+      anim: { enable: false, speed: 4, size_min: 0.1, sync: false }
     },
     line_linked: {
       enable: true,
@@ -75,25 +55,14 @@ particlesJS('particles-js', {
       random: false,
       straight: false,
       out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
+      bounce: false
     }
   },
   interactivity: {
     detect_on: "canvas",
     events: {
-      onhover: {
-        enable: true,
-        mode: "repulse"
-      },
-      onclick: {
-        enable: true,
-        mode: "push"
-      },
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" },
       resize: true
     }
   },
