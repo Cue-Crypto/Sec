@@ -13,13 +13,17 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
   <style>
+    /* General body styling */
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #fff;
       overflow: hidden;
-      font-family: Arial, sans-serif;
     }
 
+    /* Particles background */
     #particles-js {
       position: absolute;
       top: 0;
@@ -29,60 +33,68 @@
       z-index: -1;
     }
 
-    /* Style for buttons and iframe */
-    .nav-btn {
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .nav-btn:hover {
-      background-color: #45a049;
-    }
-
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-    }
-
-    /* Style for login/logout info */
+    /* Login/Logout user info box */
     #user-info {
       display: none;
       position: absolute;
       top: 10px;
       left: 10px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 10px;
     }
 
-    #google-login {
+    #google-login, #logout-btn {
       position: absolute;
       top: 10px;
-      left: 10px;
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
+      right: 10px;
+      background-color: #F1C40F;
+      color: black;
+      padding: 10px 25px;
       border: none;
+      border-radius: 30px;
+      font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    #google-login:hover {
-      background-color: #45a049;
+    #google-login:hover, #logout-btn:hover {
+      background-color: #F39C12;
     }
 
-    #logout-btn {
-      background-color: #f44336;
+    /* Style for buttons */
+    .nav-btn {
+      margin: 15px;
+      padding: 12px 25px;
+      background-color: #F1C40F;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    #logout-btn:hover {
-      background-color: #e53935;
+    .nav-btn:hover {
+      background-color: #F39C12;
     }
+
+    /* Style for iframe */
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Text for username */
+    #user-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -99,11 +111,13 @@
   <button id="google-login">Login with Google</button>
 
   <!-- Buttons to change iframe source -->
-  <button class="nav-btn" data-url="https://www.youtube.com">YouTube</button>
-  <button class="nav-btn" data-url="https://chat.openai.com">ChatGPT</button>
-  <button class="nav-btn" data-url="https://www.tiktok.com">TikTok</button>
-  <button class="nav-btn" data-url="https://now.gg">Now.gg</button>
-  <button class="nav-btn" data-url="https://1v1.lol">1v1.lol</button>
+  <div style="position: absolute; top: 120px; left: 50%; transform: translateX(-50%);">
+    <button class="nav-btn" data-url="https://www.youtube.com">YouTube</button>
+    <button class="nav-btn" data-url="https://chat.openai.com">ChatGPT</button>
+    <button class="nav-btn" data-url="https://www.tiktok.com">TikTok</button>
+    <button class="nav-btn" data-url="https://now.gg">Now.gg</button>
+    <button class="nav-btn" data-url="https://1v1.lol">1v1.lol</button>
+  </div>
 
   <!-- Iframe to display websites -->
   <iframe id="website-frame" src=""></iframe>
