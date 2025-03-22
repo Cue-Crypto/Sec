@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Content of the page -->
+  <div class="content">
+    <h1>Welcome to the Website</h1>
+    <button class="nav-btn" data-url="https://www.youtube.com" target="website-frame">YouTube</button>
+    <button class="nav-btn" data-url="https://chat.openai.com" target="website-frame">ChatGPT</button>
+    <button class="nav-btn" data-url="https://www.tiktok.com" target="website-frame">TikTok</button>
+    <button class="nav-btn" data-url="https://now.gg" target="website-frame">Now.gg</button>
+    <button class="nav-btn" data-url="https://1v1.lol" target="website-frame">1v1.lol</button>
+    <!-- Add more buttons as needed -->
+
+    <!-- Iframe to show selected website -->
+    <iframe name="website-frame" id="website-frame" class="website-frame"></iframe>
+  </div>
+
+  <!-- Firebase and Particle JS Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
