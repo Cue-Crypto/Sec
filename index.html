@@ -3,31 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Navigation</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
+  <title>Secc - Firebase Login & Iframe</title>
 
-  <!-- Content of the page -->
-  <div class="content">
-    <h1>Welcome to the Website</h1>
-    <button class="nav-btn" data-url="https://www.youtube.com" target="website-frame">YouTube</button>
-    <button class="nav-btn" data-url="https://chat.openai.com" target="website-frame">ChatGPT</button>
-    <button class="nav-btn" data-url="https://www.tiktok.com" target="website-frame">TikTok</button>
-    <button class="nav-btn" data-url="https://now.gg" target="website-frame">Now.gg</button>
-    <button class="nav-btn" data-url="https://1v1.lol" target="website-frame">1v1.lol</button>
-    <!-- Add more buttons as needed -->
-
-    <!-- Iframe to show selected website -->
-    <iframe name="website-frame" id="website-frame" class="website-frame"></iframe>
-  </div>
-
-  <!-- Firebase and Particle JS Scripts -->
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Style for buttons and iframe */
+    .nav-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background-color: #45a049;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+
+    /* Style for login/logout info */
+    #user-info {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #google-login {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #google-login:hover {
+      background-color: #45a049;
+    }
+
+    #logout-btn {
+      background-color: #f44336;
+    }
+
+    #logout-btn:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particles.js background -->
+  <div id="particles-js"></div>
+
+  <!-- User info and login/logout buttons -->
+  <div id="user-info">
+    <p>Welcome, <span id="user-name"></span></p>
+    <button id="logout-btn">Logout</button>
+  </div>
+
+  <button id="google-login">Login with Google</button>
+
+  <!-- Buttons to change iframe source -->
+  <button class="nav-btn" data-url="https://www.youtube.com">YouTube</button>
+  <button class="nav-btn" data-url="https://chat.openai.com">ChatGPT</button>
+  <button class="nav-btn" data-url="https://www.tiktok.com">TikTok</button>
+  <button class="nav-btn" data-url="https://now.gg">Now.gg</button>
+  <button class="nav-btn" data-url="https://1v1.lol">1v1.lol</button>
+
+  <!-- Iframe to display websites -->
+  <iframe id="website-frame" src=""></iframe>
+
+  <!-- Firebase and Custom JS -->
   <script src="app.js"></script>
+
 </body>
 </html>
