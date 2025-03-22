@@ -25,7 +25,7 @@ particlesJS('particles-js', {
       value: 80,
       density: { enable: true, value_area: 800 }
     },
-    color: { value: "#ffffff" },
+    color: { value: "#F1C40F" },  // Yellow particles
     shape: {
       type: "circle",
       stroke: { width: 0, color: "#000000" },
@@ -44,7 +44,7 @@ particlesJS('particles-js', {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#ffffff",
+      color: "#F1C40F",  // Yellow lines
       opacity: 0.4,
       width: 1
     },
