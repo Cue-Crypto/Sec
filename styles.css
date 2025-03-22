@@ -3,9 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #111;
+  background-color: #111; /* Black background */
   color: #fff;
   overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Particles background */
@@ -18,7 +23,7 @@ body {
   z-index: -1;
 }
 
-/* Login/Logout user info box */
+/* User info and login/logout buttons */
 #user-info {
   display: none;
   position: absolute;
@@ -34,48 +39,59 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #F1C40F;
+  background-color: #F1C40F; /* Yellow button */
   color: black;
-  padding: 10px 25px;
+  padding: 15px 30px;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px; /* Round corners */
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 16px;
 }
 
 #google-login:hover, #logout-btn:hover {
-  background-color: #F39C12;
+  background-color: #F39C12; /* Slightly darker yellow on hover */
 }
 
-/* Style for buttons */
+/* Style for nav buttons (rounded, yellow) */
 .nav-btn {
   margin: 15px;
-  padding: 12px 25px;
-  background-color: #F1C40F;
+  padding: 15px 30px;
+  background-color: #F1C40F; /* Yellow button */
   color: black;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px; /* Round corners */
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .nav-btn:hover {
-  background-color: #F39C12;
+  background-color: #F39C12; /* Slightly darker yellow on hover */
 }
 
 /* Style for iframe */
 iframe {
-  width: 100%;
+  width: 80%;
   height: 80vh;
   border: none;
   border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* Text for username */
 #user-name {
   font-size: 18px;
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Center all elements properly */
+#google-login, #logout-btn, .nav-btn {
+  position: relative;
+  z-index: 2;
 }
