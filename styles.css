@@ -23,37 +23,6 @@ body {
   z-index: -1;
 }
 
-/* User info and login/logout buttons */
-#user-info {
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#google-login, #logout-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #F1C40F; /* Yellow button */
-  color: black;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 50px; /* Round corners */
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 16px;
-}
-
-#google-login:hover, #logout-btn:hover {
-  background-color: #F39C12; /* Slightly darker yellow on hover */
-}
-
 /* Style for nav buttons (rounded, yellow) */
 .nav-btn {
   margin: 15px;
@@ -81,17 +50,4 @@ iframe {
   margin-top: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-/* Text for username */
-#user-name {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-/* Center all elements properly */
-#google-login, #logout-btn, .nav-btn {
-  position: relative;
-  z-index: 2;
 }
